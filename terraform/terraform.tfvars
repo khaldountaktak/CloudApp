@@ -1,0 +1,1 @@
+path = "/home/khaldoun/Documents/cloudCv/test-app/build"
