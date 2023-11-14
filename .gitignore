@@ -1,8 +1,0 @@
-organization.yml
-**/node_modules/
-/test-app/build
-**/.terraform/
-
-**/*.tfstate
-**/*.tfstate.*
-**/.terraform.lock.hcl
