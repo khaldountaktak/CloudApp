@@ -9,11 +9,13 @@ pipeline {
 stages{
     stage("Build"){
             steps {
+                dir("test-app"){
                 sh "pwd"
                 sh "ls -a"
                 sh "cd ./test-app"
                 sh "npm install"
                 sh "npm run build"
+                }
     }
     }
 }
