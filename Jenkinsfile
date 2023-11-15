@@ -9,6 +9,8 @@ pipeline {
 stages{
     stage("Build"){
             steps {
+                sh "pwd"
+                sh "ls -a"
                 sh "cd ./test-app"
                 sh "npm install"
                 sh "npm run build"
