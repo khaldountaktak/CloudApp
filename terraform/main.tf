@@ -1,3 +1,6 @@
+terraform {
+  backend "s3" {}
+}
 
 provider "aws" {
   region = "eu-west-3"
@@ -56,7 +59,7 @@ resource "aws_api_gateway_integration" "integration" {
   http_method             = aws_api_gateway_method.method.http_method
   integration_http_method = "POST"
   type                    = "AWS_PROXY"
-  uri                     = module.lambda_funct.arn_lambda
+  uri                     = "arn:aws:apigateway:eu-west-3:lambda:path/2015-03-31/functions/arn:aws:lambda:eu-west-3:813382538170:function:dynamoDB/invocations"
 }
 
 # provider "aws" {
