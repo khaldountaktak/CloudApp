@@ -19,6 +19,11 @@ stages{
     }
 
     stage("Deploy"){
+        agent {
+            docker {
+                image "hashicorp/terraform"
+            }
+        }
         steps{
             dir("terraform"){
 
