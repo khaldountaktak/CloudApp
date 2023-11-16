@@ -26,7 +26,7 @@ stages{
     string(credentialsId: 'aws_access_key_id', variable: 'AWS_ACCESS_KEY_ID'),
     string(credentialsId: 'aws_secret_access_key', variable: 'AWS_SECRET_ACCESS_KEY')
 ]){
-                    sh "terraform init -backend-config="bucket=tf-state-jenkins-test" -backend-config="region=eu-west-3" -backend-config="./terraform""
+                    sh "terraform init -backend-config=bucket=tf-state-jenkins-test -backend-config=region=eu-west-3 -backend-config=./terraform"
                     sh "terraform apply --auto-approve"
 }
             }
