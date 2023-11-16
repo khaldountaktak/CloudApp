@@ -20,11 +20,7 @@ pipeline {
         }
 
         stage("Deploy") {
-            agent {
-                docker {
-                    image "hashicorp/terraform"
-                }
-            }
+            agent any
             steps {
                 dir("terraform") {
                     withCredentials([
